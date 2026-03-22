@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: healthy-hens-container
-        image: ankitanallamilli/healthy-hens-java:IMAGE_TAG
+        image: lakshmivinuthnamutyala/healthy-hens-java:latest
         ports:
         - containerPort: 8080
 
