@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB_USERNAME = "ankitanallamilli"
+        DOCKER_HUB_USERNAME = "lakshmivinuthnamutyala"
         IMAGE_NAME = "${DOCKER_HUB_USERNAME}/healthy-hens-java:${BUILD_NUMBER}"
     }
 
@@ -15,7 +15,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/2000ankitareddy/poultry-healthy-hens-java.git', branch: 'main'
+                git url: 'https://github.com/muthyalavinuthna/Poultry-Healthy-Hens-Java.git', branch: 'main'
             }
         }
 
@@ -35,7 +35,7 @@ pipeline {
             steps {
 
                 withCredentials([usernamePassword(
-                    credentialsId: 'ANKITA_DOCK_HUB',
+                    credentialsId: 'docker-credentials',
                     usernameVariable: 'USERNAME',
                     passwordVariable: 'PASSWORD'
                 )]) {
